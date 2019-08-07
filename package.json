@@ -1,0 +1,51 @@
+{
+  "name": "yct",
+  "version": "1.0.3",
+  "description": "",
+  "main": "main4.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder --win --x64"
+  },
+  "author": "cicjust",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.1",
+    "electron-builder": "^20.43.0"
+  },
+  "dependencies": {
+    "builder": "^4.0.0",
+    "electron-updater": "^4.0.6"
+  },
+  "build": {
+    "productName": "太浦河经济开发区",
+    "appId": "www.cicjust.com",
+    "copyright": "www.cicjust.com",
+    "directories": {
+      "output": "../buildtph"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowElevation": true,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "ico_tph.ico",
+      "uninstallerIcon": "ico_tph.ico",
+      "installerHeaderIcon": "ico_tph.ico",
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "太浦河经济开发区"
+    },
+    "win": {
+      "icon": "ico_tph.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    }
+  }
+}
